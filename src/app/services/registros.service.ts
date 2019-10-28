@@ -24,6 +24,10 @@ export class RegistrosService {
 
   }
 
+  registrarMesaRestaurante(datos){
+    return this.http.post('http://localhost:3500/restaurante/mesa',datos);
+  }
+
   registrarProductoRestaurante(datos){
     return this.http.post('http://localhost:3500/restaurante/despensa',datos)
   }

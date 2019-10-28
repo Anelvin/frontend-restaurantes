@@ -12,20 +12,17 @@
           <h1>Restaurante Anelvin - {{restaurante}}</h1>
         </div>
         <div class="row">
-          <h3>Mesas del restaurante</h3>
+          <h3>Registrar Mesa</h3>
         </div>
-        <div>
-          <button class="btn btn-success" (click)="agregarMesa()">➕Agregar Mesa</button>
-        </div>
-        <div class="contenedorMesas">
-          <div *ngFor="let mesa of mesas">
-            <div *ngIf="mesa.reservada == false" class="mesaLibre">
-              {{mesa.nombre}}
-            </div>
-            <div *ngIf="mesa.reservada == true" class="mesaOcupada">
-                {{mesa.nombre}}
+        <div class="col-8 offset-2">
+            <form>
+              <div class="form-group pt-5">
+                <label>Nombre</label>
+                <input type="text" [(ngModel)]="nombreMesa" class="form-control" placeholder="Nombre de la mesa"
+                  name="usuario">
               </div>
-          </div>
+              <button class="btn btn-primary mb-5" (click)="enviar()">Enviar</button>
+            </form>
         </div>
       </div>
     </div>

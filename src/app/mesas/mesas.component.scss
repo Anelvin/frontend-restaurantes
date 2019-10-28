@@ -1,0 +1,51 @@
+.contenedorMesa{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2Ffondo-restaurante3.jpg?alt=media');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    width:100vw;
+    height: 96vh;
+    overflow: hidden;
+    .row{
+        justify-content: center;
+        align-items: center;
+    }
+    .imagenProducto{
+        img{
+            width:4vw;
+        }
+    }
+    .container{
+        background-color:rgba(255,255,255,0.8);
+        border-radius: 4px;
+    }
+    .contenedorMesas{
+        height: 50vh;
+        overflow: auto;
+        .mesaLibre{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content: center;
+            font-weight: bold;
+            margin:1vw;
+            width:5vw;
+            height:5vw;
+            background-color:#44a544;
+            float:left;
+        }
+        .mesaOcupada{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content: center;
+            font-weight: bold;
+            margin:1vw;
+            width:5vw;
+            height:5vw;
+            background-color:#9e322f;
+            float:left;
+        }
+    }
+}

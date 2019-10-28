@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PlatoComponent } from './plato/plato.component';
 import { RegistrarPlatoComponent } from './registrar-plato/registrar-plato.component';
 import { MesasComponent } from './mesas/mesas.component';
+import { RegistrarMesaComponent } from './registrar-mesa/registrar-mesa.component';
 import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
 
 
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'restaurante/:id/mesas',
     component:MesasComponent
+  },
+  {
+    path:'restaurante/:id/mesas/registrar',
+    component:RegistrarMesaComponent
   }
 ];
 

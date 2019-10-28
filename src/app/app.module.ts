@@ -18,6 +18,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { NavegacionEmpleadosComponent } from './navegacion-empleados/navegacion-empleados.component';
 import { MesasComponent } from './mesas/mesas.component';
 import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
+import { RegistrarMesaComponent } from './registrar-mesa/registrar-mesa.component';
+import { DescripcionProductoComponent } from './descripcion-producto/descripcion-producto.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { RegistrarProductoComponent } from './registrar-producto/registrar-produ
     RegistrarPlatoComponent,
     NavegacionEmpleadosComponent,
     MesasComponent,
-    RegistrarProductoComponent
+    RegistrarProductoComponent,
+    RegistrarMesaComponent,
+    DescripcionProductoComponent
   ],
   imports: [
     BrowserModule,
