@@ -1,1 +1,45 @@
-<p>despensa works!</p>
+<app-navegacion-empleados></app-navegacion-empleados>
+
+<div class="contenedorDespensa">
+  <div class="pt-5"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2FLogo-empresa.png?alt=media"
+            alt="Logo Restaurante">
+          <h1>Restaurante Anelvin - {{restaurante}}</h1>
+        </div>
+        <div class="row">
+          <h3>Productos en la despensa</h3>
+        </div>
+        <div>
+          <button class="btn btn-success" (click)="agregarProducto()">➕Agregar producto</button>
+        </div>
+        <div class="contenedorTabla">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of productos">
+                <th scope="row">{{producto._id}}</th>
+                <td class="imagenProducto"><img
+                    src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenProductos%2F{{producto.imagenURL}}?alt=media"
+                    alt=""></td>
+                <td>{{producto.producto}}</td>
+                <td>{{producto.cantidad}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

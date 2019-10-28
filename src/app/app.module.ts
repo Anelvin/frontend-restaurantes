@@ -16,6 +16,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { NavegacionEmpleadosComponent } from './navegacion-empleados/navegacion-empleados.component';
+import { MesasComponent } from './mesas/mesas.component';
+import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavegacionEmpleadosComponent } from './navegacion-empleados/navegacion-
     LoginComponent,
     PlatoComponent,
     RegistrarPlatoComponent,
-    NavegacionEmpleadosComponent
+    NavegacionEmpleadosComponent,
+    MesasComponent,
+    RegistrarProductoComponent
   ],
   imports: [
     BrowserModule,

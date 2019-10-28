@@ -13,4 +13,11 @@ export class ConsultasService {
     return this.http.post('http://localhost:3500/plato',datos);
   }
 
+  consultarProductosAlmacen(){
+    return this.http.get('http://localhost:3500/producto');
+  }
+
+  consultarRestaurante(restaurante){
+    return this.http.get('http://localhost:3500/restaurante/'+restaurante);
+  }
 }

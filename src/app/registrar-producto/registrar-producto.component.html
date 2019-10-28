@@ -1,0 +1,39 @@
+<app-navegacion-empleados></app-navegacion-empleados>
+<div class="contenedorProducto">
+        <div class="pt-5"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <div class="row">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2FLogo-empresa.png?alt=media"
+                  alt="Logo Restaurante">
+                <h1>Restaurante Anelvin - {{restaurante}}</h1>
+              </div>
+              <div class="row">
+                <h3>Agregar producto</h3>
+              </div>
+              <div>
+                <div class="col-8 offset-2">
+                  <form>
+                    <div class="form-group pt-5">
+                      <label>Producto</label>
+                      <select class="form-control" [(ngModel)]="imagenURL" (change)="verNombre($event)" name="imagenURL">
+                            <option *ngFor="let producto of productos" value="{{producto.imagenURL}}" text="{{producto.nombre}}">
+                            {{producto.nombre}}
+                          </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Cantidad</label>
+                      <input type="text" [(ngModel)]="cantidad" name="cantidad" class="form-control"
+                        placeholder="Cantidad" name="cantidad">
+                    </div>
+                    <button class="btn btn-primary mb-5" (click)="enviar()">Registrar</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -24,6 +24,10 @@ export class RegistrosService {
 
   }
 
+  registrarProductoRestaurante(datos){
+    return this.http.post('http://localhost:3500/restaurante/despensa',datos)
+  }
+
   consultarPlatos(){
     return this.http.get('http://localhost:3500/plato');
   }

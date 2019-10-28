@@ -4,6 +4,8 @@ import { DespensaComponent } from './despensa/despensa.component';
 import { LoginComponent } from './login/login.component';
 import { PlatoComponent } from './plato/plato.component';
 import { RegistrarPlatoComponent } from './registrar-plato/registrar-plato.component';
+import { MesasComponent } from './mesas/mesas.component';
+import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
 
 
 const routes: Routes = [
@@ -20,8 +22,16 @@ const routes: Routes = [
     component:RegistrarPlatoComponent
   },
   {
-    path:'restaurante/despensa',
+    path:'restaurante/:id/despensa',
     component:DespensaComponent
+  },
+  {
+    path:'restaurante/:id/despensa/registrar',
+    component:RegistrarProductoComponent
+  },
+  {
+    path:'restaurante/:id/mesas',
+    component:MesasComponent
   }
 ];
 

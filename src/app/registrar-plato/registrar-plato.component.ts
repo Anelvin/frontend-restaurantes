@@ -44,7 +44,6 @@ export class RegistrarPlatoComponent implements OnInit {
     }
     this.registroService.registroPlato(datos)
     .subscribe(resultado=>{
-      console.log(resultado);
       this.router.navigate(['/restaurante/'+this.nombreRestaurante+'/plato']);
     })
   }
