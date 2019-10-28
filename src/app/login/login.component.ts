@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
-import { Restaurante } from '../models/restaurante.model';
-import { HttpRequest } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +16,7 @@ export class LoginComponent implements OnInit {
   private usuario:string;
   private password:string;
   private restaurante:string
-  constructor(private loginService:LoginService) { }
+  constructor(private loginService:LoginService, private router:Router) { }
 
   ngOnInit() {
     this.loginService.buscarRestaurantes(this.direccionURL)
@@ -34,8 +33,9 @@ export class LoginComponent implements OnInit {
     }
     this.loginService.login(this.direccionLogin, datos)
     .subscribe(resultado=>{
-      console.log(resultado);
-    },error=>alert('Ha habido un problema con al entrar'))
+        sessionStorage.setItem("token",resultado['access_token'])
+        this.router.navigate(['/restaurante/'+this.restaurante+'/plato'])
+    },error=>alert('Error, verifica tus datos'))
   }
 
 }

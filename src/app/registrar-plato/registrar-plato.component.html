@@ -1,0 +1,42 @@
+<div class="contenedorPlato">
+    <div class="pt-5"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <div class="row">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2FLogo-empresa.png?alt=media"
+              alt="Logo Restaurante">
+            <h1>Restaurante Anelvin - {{restaurante}}</h1>
+          </div>
+          <div class="row">
+            <h3>Agregar plato</h3>
+          </div>
+          <div class="container">
+            <div class="col-8 offset-2">
+              <form>
+                <div class="form-group pt-5">
+                  <label>Nombre</label>
+                  <input type="text" [(ngModel)]="nombrePlato" class="form-control" placeholder="Nombre del plato"
+                    name="usuario">
+                </div>
+                <div class="form-group">
+                  <label>Restaurante</label>
+                  <input type="text" [(ngModel)]="nombreRestaurante" readonly class="form-control"
+                    placeholder="Nombre del restaurante" name="password">
+                </div>
+                <div class="form-group">
+                  <label>Imagen</label>
+                  <input type="file" (change)="subirImagen($event)" name="imagen" id="">
+
+                </div>
+                <button class="btn btn-primary mb-5" (click)="enviar()">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
