@@ -1,0 +1,48 @@
+<app-navegacion-empleados></app-navegacion-empleados>
+
+<div class="contenedorPlato">
+  <div class="pt-5"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2FLogo-empresa.png?alt=media"
+            alt="Logo Restaurante">
+          <h1>Restaurante Anelvin - {{restaurante}}</h1>
+        </div>
+        <h3 class="text-center">Plato</h3>
+        <div class="row">
+          <div class="col-4 imagenPlato">
+            <img 
+              src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenPlatos%2F{{plato.imagenURL}}?alt=media"
+              alt="">
+          </div>
+          <div class="col-4">
+            <div class="contenedorNombre">
+              <h3>Nombre: </h3>
+              <span>{{plato.nombre}}</span>
+            </div>
+            <div class="contenedorNombre">
+              <h3>Restaurante: </h3>
+              <span>{{plato.restaurante}}</span>
+            </div>
+            <h3>Ingredientes</h3>
+            <label class="ingredientes" *ngFor="let ingrediente of ingredientesAdd">{{ingrediente}}</label>
+          </div>
+          <div class="col-4">
+            <select class="form-control control-select" [(ngModel)]="ingrediente" value="{{ingrediente.producto}}" name="ingrediente">
+                <option value="">Seleccione un ingrediente...</option>
+              <option *ngFor="let ingrediente of ingredientes"  >
+                {{ingrediente.producto}}
+              </option>
+            </select>
+            <button class="btn btn-success mt-3" (click)="enviar()">Agregar Ingrediente</button>
+          </div>
+        </div>
+        <div class="contenedorTabla">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,6 +20,7 @@ import { MesasComponent } from './mesas/mesas.component';
 import { RegistrarProductoComponent } from './registrar-producto/registrar-producto.component';
 import { RegistrarMesaComponent } from './registrar-mesa/registrar-mesa.component';
 import { DescripcionProductoComponent } from './descripcion-producto/descripcion-producto.component';
+import { DescripcionPlatoComponent } from './descripcion-plato/descripcion-plato.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DescripcionProductoComponent } from './descripcion-producto/descripcion
     MesasComponent,
     RegistrarProductoComponent,
     RegistrarMesaComponent,
-    DescripcionProductoComponent
+    DescripcionProductoComponent,
+    DescripcionPlatoComponent
   ],
   imports: [
     BrowserModule,

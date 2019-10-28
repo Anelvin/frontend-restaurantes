@@ -36,4 +36,8 @@ export class PlatoComponent implements OnInit {
     this.router.navigate(['/restaurante/'+this.restaurante+'/plato/registrar']);
   }
 
+  detalle(platoID){
+    this.router.navigate(['/restaurante/'+this.restaurante+'/plato/'+platoID]);
+  }
+
 }

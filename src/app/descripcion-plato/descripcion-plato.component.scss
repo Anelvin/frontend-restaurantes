@@ -11,20 +11,32 @@
         justify-content: center;
         align-items: center;
     }
-    .imagenPlato{
-        img{
-            width:4vw;
-        }
-    }
     .container{
         background-color:rgba(255,255,255,0.8);
         border-radius: 4px;
     }
-    .contenedorTabla{
-        height: 50vh;
-        overflow: auto;
+    .imagenPlato{
+        img{
+            width: 15vw;
+            padding: 2vw 0;
+        }
     }
-    .filaPlato:hover{
-        cursor: pointer;
+    .contenedorNombre{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span{
+            margin-left:1vw;
+            font-size:1vw;
+        }
     }
+    .col-7{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .ingredientes{
+        margin:0 1vh;
+    }
+    
 }

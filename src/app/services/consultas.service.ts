@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 @Injectable({
@@ -19,5 +19,9 @@ export class ConsultasService {
 
   consultarRestaurante(restaurante){
     return this.http.get('http://localhost:3500/restaurante/'+restaurante);
+  }
+
+  consultarPlato(platoID,datos){
+    return this.http.post('http://localhost:3500/plato/'+platoID,datos);
   }
 }

@@ -28,7 +28,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let plato of platos">
+                <tr *ngFor="let plato of platos" (click)="detalle(plato._id)" class="filaPlato">
                   <th scope="row">{{plato._id}}</th>
                   <td class="imagenPlato"><img
                       src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenPlatos%2F{{plato.imagenURL}}?alt=media"
