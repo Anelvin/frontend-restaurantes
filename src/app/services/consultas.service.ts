@@ -21,6 +21,10 @@ export class ConsultasService {
     return this.http.get('http://localhost:3500/restaurante/'+restaurante);
   }
 
+  consultaRestaurantes(){
+    return this.http.get('http://localhost:3500/restaurante');
+  }
+
   consultarPlato(platoID,datos){
     return this.http.post('http://localhost:3500/plato/'+platoID,datos);
   }

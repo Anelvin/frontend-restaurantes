@@ -1,0 +1,55 @@
+<div class="cuerpoReserva">
+  <app-nav-clientes></app-nav-clientes>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenFondo%2FLogo-empresa.png?alt=media"
+          alt="Logo Restaurante">
+      </div>
+      <div class="col-8">
+        <h3>Restaurante</h3>
+        <div class="form-group col-6">
+          <select class="form-control" [(ngModel)]="restaurante" name="restaurante" (change)="buscarMesas()">
+            <option *ngFor="let restaurante of restaurantes" value="{{restaurante.nombre}}">{{restaurante.nombre}}
+            </option>
+          </select>
+          <button *ngIf="restauranteSeleccionado == true" class="btn btn-success mt-2" (click)="buscarPlatos()">Ver platos</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="mostrarMesas == true" class="contenedorMesas">
+      <div *ngFor="let mesa of mesas">
+        <div *ngIf="mesa.reservada == false" class="mesaLibre">
+          {{mesa.nombre}}
+        </div>
+        <div *ngIf="mesa.reservada == true" class="mesaOcupada">
+          {{mesa.nombre}}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="mostrarPlatos == true" class="contenedorTabla">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Restaurante</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let plato of platos" (click)="detalle(plato._id)" class="filaPlato">
+                  <th scope="row">{{plato._id}}</th>
+                  <td class="imagenPlato"><img
+                      src="https://firebasestorage.googleapis.com/v0/b/restaurantes-7f37d.appspot.com/o/imagenPlatos%2F{{plato.imagenURL}}?alt=media"
+                      alt=""></td>
+                  <td>{{plato.nombre}}</td>
+                  <td>{{plato.restaurante}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+  </div>
+</div>

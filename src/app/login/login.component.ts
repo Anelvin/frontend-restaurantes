@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   private direccionURL='http://localhost:3500/restaurante';
-  private direccionLogin='http://localhost:3500/restaurante/login'
+  private direccionLogin='http://localhost:3500/login'
   private restaurantes:any;
   private usuario:string;
   private password:string;
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   enviar(){
     let datos={
-      usuario:this.usuario,
+      nombre:this.usuario,
       password:this.password,
       restaurante:this.restaurante 
     }

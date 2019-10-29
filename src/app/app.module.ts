@@ -21,6 +21,9 @@ import { RegistrarProductoComponent } from './registrar-producto/registrar-produ
 import { RegistrarMesaComponent } from './registrar-mesa/registrar-mesa.component';
 import { DescripcionProductoComponent } from './descripcion-producto/descripcion-producto.component';
 import { DescripcionPlatoComponent } from './descripcion-plato/descripcion-plato.component';
+import { HomeComponent } from './home/home.component';
+import { NavClientesComponent } from './nav-clientes/nav-clientes.component';
+import { ReservasComponent } from './reservas/reservas.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { DescripcionPlatoComponent } from './descripcion-plato/descripcion-plato
     RegistrarProductoComponent,
     RegistrarMesaComponent,
     DescripcionProductoComponent,
-    DescripcionPlatoComponent
+    DescripcionPlatoComponent,
+    HomeComponent,
+    NavClientesComponent,
+    ReservasComponent
   ],
   imports: [
     BrowserModule,

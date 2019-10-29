@@ -9,8 +9,18 @@ import { DescripcionPlatoComponent } from './descripcion-plato/descripcion-plato
 import { RegistrarPlatoComponent } from './registrar-plato/registrar-plato.component';
 import { MesasComponent } from './mesas/mesas.component';
 import { RegistrarMesaComponent } from './registrar-mesa/registrar-mesa.component';
+import { HomeComponent } from './home/home.component';
+import { ReservasComponent } from './reservas/reservas.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    component:HomeComponent
+  },
+  {
+    path:'reservas',
+    component:ReservasComponent
+  },
   {
     path:'restaurante/login',
     component:LoginComponent
@@ -20,24 +30,24 @@ const routes: Routes = [
     component:PlatoComponent
   },
   {
-    path:'restaurante/:id/plato/:platoID',
-    component:DescripcionPlatoComponent
-  },
-  {
     path:'restaurante/:id/plato/registrar',
     component:RegistrarPlatoComponent
+  },
+  {
+    path:'restaurante/:id/plato/:platoID',
+    component:DescripcionPlatoComponent
   },
   {
     path:'restaurante/:id/despensa',
     component:DespensaComponent
   },
   {
-    path:'restaurante/:id/despensa/:productoID',
-    component:DescripcionProductoComponent
-  },
-  {
     path:'restaurante/:id/despensa/registrar',
     component:RegistrarProductoComponent
+  },
+  {
+    path:'restaurante/:id/despensa/:productoID',
+    component:DescripcionProductoComponent
   },
   {
     path:'restaurante/:id/mesas',
